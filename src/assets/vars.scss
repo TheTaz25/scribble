@@ -1,0 +1,11 @@
+:root {
+  --unit-space: 1rem;
+  --half-space: calc(var(--unit-space) / 2);
+  --fourth-space: calc(var(--unit-space) / 4);
+  --double-space: calc(var(--unit-space) * 2);
+  --quad-space: calc(var(--unit-space) * 4);
+
+  --break-up-tablet: 500px;
+  --break-up-desktop: 1270px;
+  --break-up-large: 1921px;
+}
