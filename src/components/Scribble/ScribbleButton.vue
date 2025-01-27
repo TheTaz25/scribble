@@ -1,6 +1,6 @@
 <template>
   <button class="scribble">
-    <slot></slot>
+    <slot />
   </button>
 </template>
 

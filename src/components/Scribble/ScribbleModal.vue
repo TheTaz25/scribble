@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" v-if="showModal">
+  <div v-if="showModal" class="modal">
     <div class="modal-bg"></div>
     <div class="modal-fg">
       <ScribblePaper style="min-width: 450px; min-height: 250px" class="content">

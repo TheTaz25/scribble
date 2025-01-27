@@ -18,6 +18,9 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.19.0
+        version: 9.19.0
       '@rushstack/eslint-patch':
         specifier: ^1.10.5
         version: 1.10.5
@@ -45,9 +48,15 @@ importers:
       eslint:
         specifier: ^9.19.0
         version: 9.19.0
+      eslint-config-prettier:
+        specifier: ^10.0.1
+        version: 10.0.1(eslint@9.19.0)
       eslint-plugin-vue:
         specifier: ^9.32.0
         version: 9.32.0(eslint@9.19.0)
+      globals:
+        specifier: ^15.14.0
+        version: 15.14.0
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -57,6 +66,9 @@ importers:
       typescript:
         specifier: ~5.7.3
         version: 5.7.3
+      typescript-eslint:
+        specifier: ^8.21.0
+        version: 8.21.0(eslint@9.19.0)(typescript@5.7.3)
       vite:
         specifier: ^6.0.11
         version: 6.0.11(@types/node@20.17.16)(sass@1.83.4)
@@ -1140,6 +1152,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@15.14.0:
+    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
     engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
@@ -2854,6 +2870,8 @@ snapshots:
       type-fest: 0.20.2
 
   globals@14.0.0: {}
+
+  globals@15.14.0: {}
 
   graceful-fs@4.2.11: {}
 
