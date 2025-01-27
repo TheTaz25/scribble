@@ -21,6 +21,9 @@ export default defineConfig({
     preprocessorOptions: {
       sass: {
         additionalData: '@import "@/assets/vars.scss";',
+      },
+      scss: {
+        api: 'modern-compiler'
       }
     },
     // @ts-ignore
