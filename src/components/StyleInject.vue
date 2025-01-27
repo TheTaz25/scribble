@@ -6,8 +6,8 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
 type Props = {
-  rootColor: string,
-}
+  rootColor: string;
+};
 
 const props = defineProps<Props>();
 const styleRef = ref<HTMLElement | null>(null);
@@ -24,7 +24,6 @@ onMounted(() => {
   }
   `;
   styleTag.id = `color-${props.rootColor}`;
-
 
   document.head.append(styleTag);
   styleRef.value = styleTag;

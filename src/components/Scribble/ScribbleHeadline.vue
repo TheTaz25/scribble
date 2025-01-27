@@ -10,9 +10,9 @@ import { computed } from 'vue';
 type HeadingLevels = 1 | 2 | 3 | 4 | 5 | 6;
 
 type Props = {
-  hLevel: HeadingLevels,
-  appear?: HeadingLevels,
-}
+  hLevel: HeadingLevels;
+  appear?: HeadingLevels;
+};
 
 const props = defineProps<Props>();
 

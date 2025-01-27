@@ -8,8 +8,8 @@
 import { provide } from 'vue';
 
 type Props = {
-  gridSize: number,
-}
+  gridSize: number;
+};
 
 const props = defineProps<Props>();
 

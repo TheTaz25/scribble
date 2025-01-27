@@ -8,8 +8,8 @@
 import type { VueElement } from 'vue';
 
 type Props = {
-  component?: VueElement,
-}
+  component?: VueElement;
+};
 
 defineProps<Props>();
 </script>

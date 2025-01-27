@@ -4,14 +4,13 @@
   </button>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 .scribble {
   transition: all 50ms linear;
   background-color: white;
-  padding: .5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   box-shadow: 2px 2px 0px black;
   margin: var(--half-space) var(--fourth-space);

@@ -7,30 +7,51 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-type Align = 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'first baseline' | 'last baseline' | 'start' | 'end' | 'self-start' | 'self-end';
+type Align =
+  | 'stretch'
+  | 'flex-start'
+  | 'flex-end'
+  | 'center'
+  | 'baseline'
+  | 'first baseline'
+  | 'last baseline'
+  | 'start'
+  | 'end'
+  | 'self-start'
+  | 'self-end';
 type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse';
-type Justify = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly' | 'start' | 'end' | 'left' | 'right';
+type Justify =
+  | 'flex-start'
+  | 'flex-end'
+  | 'center'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly'
+  | 'start'
+  | 'end'
+  | 'left'
+  | 'right';
 type Wrap = 'wrap' | 'nowrap' | 'wrap-reverse';
 
 type Props = {
-  align?: Align,
-  justify?: Justify,
-  direction?: Direction,
-  wrap?: Wrap,
-}
+  align?: Align;
+  justify?: Justify;
+  direction?: Direction;
+  wrap?: Wrap;
+};
 
 const props = defineProps<Props>();
 
 const alignToClass: Record<Align, string> = {
-  'stretch': 'a-str',
+  stretch: 'a-str',
   'flex-start': 'a-fs',
   'flex-end': 'a-fe',
-  'center': 'a-c',
-  'baseline': 'a-b',
+  center: 'a-c',
+  baseline: 'a-b',
   'first baseline': 'a-fb',
   'last baseline': 'a-lb',
-  'start': 'a-s',
-  'end': 'a-e',
+  start: 'a-s',
+  end: 'a-e',
   'self-start': 'a-ss',
   'self-end': 'a-se',
 };
@@ -38,33 +59,33 @@ const alignToClass: Record<Align, string> = {
 const justifyToClass: Record<Justify, string> = {
   'flex-start': 'j-fs',
   'flex-end': 'j-fe',
-  'center': 'j-c',
+  center: 'j-c',
   'space-between': 'j-sb',
   'space-around': 'j-sa',
   'space-evenly': 'j-se',
-  'start': 'j-s',
-  'end': 'j-e',
-  'left': 'j-l',
-  'right': 'j-r',
+  start: 'j-s',
+  end: 'j-e',
+  left: 'j-l',
+  right: 'j-r',
 };
 
 const directionToClass: Record<Direction, string> = {
-  'row': 'd-r',
+  row: 'd-r',
   'row-reverse': 'd-rr',
-  'column': 'd-c',
+  column: 'd-c',
   'column-reverse': 'd-cr',
 };
 
 const wrapToClass: Record<Wrap, string> = {
-  'nowrap': 'w-nw',
-  'wrap': 'w-w',
-  'wrap-reverse': 'w-wr'
+  nowrap: 'w-nw',
+  wrap: 'w-w',
+  'wrap-reverse': 'w-wr',
 };
 
-const alignClass = computed(() => props.align ? alignToClass[props.align] : undefined);
-const justifyClass = computed(() => props.justify ? justifyToClass[props.justify] : undefined);
-const directionClass = computed(() => props.direction ? directionToClass[props.direction] : undefined);
-const wrapClass = computed(() => props.wrap ? wrapToClass[props.wrap] : undefined);
+const alignClass = computed(() => (props.align ? alignToClass[props.align] : undefined));
+const justifyClass = computed(() => (props.justify ? justifyToClass[props.justify] : undefined));
+const directionClass = computed(() => (props.direction ? directionToClass[props.direction] : undefined));
+const wrapClass = computed(() => (props.wrap ? wrapToClass[props.wrap] : undefined));
 </script>
 
 <style lang="scss">

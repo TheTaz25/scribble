@@ -2,7 +2,8 @@
   <div class="modal" v-if="showModal">
     <div class="modal-bg"></div>
     <div class="modal-fg">
-      <ScribblePaper style="min-width: 450px; min-height: 250px;">
+      <ScribblePaper style="min-width: 450px; min-height: 250px" class="content">
+        <ScribbleButton class="close-button" @click="$emit('close')">X</ScribbleButton>
         <slot></slot>
       </ScribblePaper>
     </div>
@@ -10,11 +11,12 @@
 </template>
 
 <script setup lang="ts">
+import ScribbleButton from './ScribbleButton.vue';
 import ScribblePaper from './ScribblePaper.vue';
 
 type Props = {
-  showModal?: boolean
-}
+  showModal?: boolean;
+};
 
 withDefaults(defineProps<Props>(), {
   showModal: true,
@@ -31,7 +33,7 @@ defineEmits(['close']);
   top: 0;
 
   & .modal-bg {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -44,6 +46,15 @@ defineEmits(['close']);
     align-items: center;
     width: 100%;
     height: 100%;
+
+    .content {
+      position: relative;
+    }
+
+    .close-button {
+      position: absolute;
+      right: 16px;
+    }
   }
 }
 </style>

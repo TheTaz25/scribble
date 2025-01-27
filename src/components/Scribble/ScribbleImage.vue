@@ -1,13 +1,12 @@
 <template>
   <img v-if="src" :src="src" />
-  <div v-else class="dummy-image">
-  </div>
+  <div v-else class="dummy-image"></div>
 </template>
 
 <script setup lang="ts">
 type Props = {
-  src?: string
-}
+  src?: string;
+};
 
 defineProps<Props>();
 </script>
