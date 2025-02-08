@@ -1,19 +1,16 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": [
-    "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*"
+    "src"
   ],
   "compilerOptions": {
     "composite": true,
-    "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
+    "outDir": "dist",
+    "declaration": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": ["node"]
-  }
+  },
+  "exclude": ["src/App.vue", "src/main.ts", "src/components/StyleInject.vue"]
 }

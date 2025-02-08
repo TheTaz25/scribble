@@ -17,6 +17,7 @@
   cursor: pointer;
   border-radius: 0 var(--unit-space) 0;
   transform: translate(-2px, -2px);
+  border: 2px solid black;
 
   &:hover,
   &:focus-visible {
