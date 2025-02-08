@@ -14,9 +14,16 @@ import ScribbleBlock from './components/Scribble/ScribbleBlock.vue';
 import ScribbleSidebar from './components/Scribble/ScribbleSidebar.vue';
 import ScribbleModal from './components/Scribble/ScribbleModal.vue';
 
-const showCustomStyles = ref(false),
- showModal = ref(false);
+const showCustomStyles = ref(false);
+const showModal = ref(false);
 </script>
+
+<!-- Wrapper!?
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto 1fr;
+-->
 
 <template>
   <ScribbleHead>

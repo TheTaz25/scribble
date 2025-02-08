@@ -19,18 +19,9 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      sass: {
-        additionalData: '@import "@/assets/vars.scss";',
-      },
       scss: {
         api: 'modern-compiler'
       }
-    },
-    // @ts-expect-error type does not correctly propagate
-    loaderOptions: {
-      sass: {
-        additionalData: '@import "@/assets/vars.scss";',
-      },
     },
   },
 });
