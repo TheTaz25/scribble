@@ -11,6 +11,8 @@ import ScribbleLink from "./components/Scribble/ScribbleLink.vue";
 import ScribbleModal from "./components/Scribble/ScribbleModal.vue";
 import ScribblePaper from "./components/Scribble/ScribblePaper.vue";
 import ScribbleSidebar from "./components/Scribble/ScribbleSidebar.vue";
+import ScribbleFloat from "./components/Scribble/ScribbleFloat.vue";
+import ScribbleFlyout from "./components/Scribble/ScribbleFlyout.vue";
 
 export {
   ScribbleBlock,
@@ -26,4 +28,6 @@ export {
   ScribbleModal,
   ScribblePaper,
   ScribbleSidebar,
+  ScribbleFloat,
+  ScribbleFlyout,
 };

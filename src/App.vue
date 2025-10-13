@@ -14,9 +14,12 @@ import ScribbleBlock from './components/Scribble/ScribbleBlock.vue';
 import ScribbleSidebar from './components/Scribble/ScribbleSidebar.vue';
 import ScribbleModal from './components/Scribble/ScribbleModal.vue';
 import ScribbleInput from './components/Scribble/ScribbleInput.vue';
+import ScribbleFloat from './components/Scribble/ScribbleFloat.vue';
+import ScribbleFlyout from './components/Scribble/ScribbleFlyout.vue';
 
 const showCustomStyles = ref(false);
 const showModal = ref(false);
+const showFlyout = ref(false);
 </script>
 
 <!-- Wrapper!?
@@ -44,10 +47,15 @@ const showModal = ref(false);
   </ScribbleHead>
   <ScribbleFlex>
     <ScribbleSidebar> Hello from Sidebar! </ScribbleSidebar>
-    <main>
-      <ScribbleButton @click="showCustomStyles = !showCustomStyles">
-        Show me Some styles
-      </ScribbleButton>
+    <main style="position: relative;">
+      <ScribbleFloat inline="start" block="start" style="z-index: 5;">
+        <ScribbleButton @click="showCustomStyles = !showCustomStyles">
+          Show me Some styles
+        </ScribbleButton>
+        <ScribbleButton @click="showFlyout = !showFlyout" >
+          Open Flyout
+        </ScribbleButton>
+      </ScribbleFloat>
       <StyleInject
         v-if="showCustomStyles"
         root-color="rgb(250,250,180)"
@@ -55,7 +63,7 @@ const showModal = ref(false);
         This is a test!
       </StyleInject>
       <br>
-      <ScribbleGrid :grid-size="4">
+      <ScribbleGrid :grid-size="4" style="margin-block-start: 2rem;">
         <ScribbleGridItem :span="1">
           Test
         </ScribbleGridItem>
@@ -134,6 +142,9 @@ const showModal = ref(false);
     <ScribbleInput label="Example Input"/>
     <ScribbleInput label="Example Input 2"/>
   </ScribbleModal>
+  <ScribbleFlyout :open="showFlyout" from="block-start">
+
+  </ScribbleFlyout>
 </template>
 
 <style>
