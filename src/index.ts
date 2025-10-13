@@ -6,6 +6,7 @@ import ScribbleGridItem from "./components/Scribble/ScribbleGridItem.vue";
 import ScribbleHead from "./components/Scribble/ScribbleHead.vue";
 import ScribbleHeadline from "./components/Scribble/ScribbleHeadline.vue";
 import ScribbleImage from "./components/Scribble/ScribbleImage.vue";
+import ScribbleInput from "./components/Scribble/ScribbleInput.vue";
 import ScribbleLink from "./components/Scribble/ScribbleLink.vue";
 import ScribbleModal from "./components/Scribble/ScribbleModal.vue";
 import ScribblePaper from "./components/Scribble/ScribblePaper.vue";
@@ -20,6 +21,7 @@ export {
   ScribbleHead,
   ScribbleHeadline,
   ScribbleImage,
+  ScribbleInput,
   ScribbleLink,
   ScribbleModal,
   ScribblePaper,

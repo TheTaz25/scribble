@@ -13,6 +13,7 @@ import ScribbleImage from './components/Scribble/ScribbleImage.vue';
 import ScribbleBlock from './components/Scribble/ScribbleBlock.vue';
 import ScribbleSidebar from './components/Scribble/ScribbleSidebar.vue';
 import ScribbleModal from './components/Scribble/ScribbleModal.vue';
+import ScribbleInput from './components/Scribble/ScribbleInput.vue';
 
 const showCustomStyles = ref(false);
 const showModal = ref(false);
@@ -59,10 +60,10 @@ const showModal = ref(false);
           Test
         </ScribbleGridItem>
         <ScribbleGridItem :span="2">
-          Test
+          Test - Span 2
         </ScribbleGridItem>
         <ScribbleGridItem :span="1">
-          Test
+          Test - 3
         </ScribbleGridItem>
         <ScribbleGridItem :span="1">
           Test
@@ -130,6 +131,8 @@ const showModal = ref(false);
     @close="showModal = false"
   >
     Content?
+    <ScribbleInput label="Example Input"/>
+    <ScribbleInput label="Example Input 2"/>
   </ScribbleModal>
 </template>
 
