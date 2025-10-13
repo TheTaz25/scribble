@@ -6,21 +6,19 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-scribble-lib.umd.cjs",
-  "module": "./dist/vue-scribble-lib.js",
   "exports": {
     ".": {
+      "types": "./dist/src/index.d.ts",
       "import": "./dist/vue-scribble-lib.js",
-      "require": "./dist/vue-scribble-lib.umd.cjs",
-      "types": "./dist/src/index.d.ts"
+      "require": "./dist/vue-scribble-lib.umd.cjs"
     },
-    "./style.css": "./dist/vue-scribble-lib.css"
+    "./style.css": "./dist/vars.css",
+    "./core.css": "./dist/vue-scribble-lib.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "build2": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
+    "build": "pnpm run build-only && pnpm run type-check",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint .",
@@ -40,11 +38,13 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
+    "cssnano": "^7.1.1",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.5.0",
     "globals": "^16.4.0",
     "npm-run-all2": "^8.0.4",
+    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
