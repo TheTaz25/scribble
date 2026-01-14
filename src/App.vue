@@ -16,6 +16,7 @@ import ScribbleModal from './components/Scribble/ScribbleModal.vue';
 import ScribbleInput from './components/Scribble/ScribbleInput.vue';
 import ScribbleFloat from './components/Scribble/ScribbleFloat.vue';
 import ScribbleFlyout from './components/Scribble/ScribbleFlyout.vue';
+import ScribbleToggle from './components/Scribble/ScribbleToggle.vue';
 
 const showCustomStyles = ref(false);
 const showModal = ref(false);
@@ -132,6 +133,7 @@ const showFlyout = ref(false);
       <ScribbleHeadline :h-level="6">
         Hello!
       </ScribbleHeadline>
+      <ScribbleToggle label="I am Toggle"/>
     </main>
   </ScribbleFlex>
   <ScribbleModal
